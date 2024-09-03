@@ -95,12 +95,12 @@ class _SpinWheelScreenState extends State<SpinWheelScreen> {
                   _playSound();
 
                   // Get the selected index from the stream and retrieve the item
-                  selected.stream.first.then((index) {
-                    setState(() {
-                      selectedIndex = index;
-                      _showSelectedItem(); // Display or use the selected item
-                    });
-                  });
+                  // selected.stream.first.then((index) {
+                  //   setState(() {
+                  //     selectedIndex = index;
+                  //     _showSelectedItem(); // Display or use the selected item
+                  //   });
+                  // });
                 },
                 items: [
                   for (var it in items) FortuneItem(child: Text(it)),
@@ -126,12 +126,12 @@ class _SpinWheelScreenState extends State<SpinWheelScreen> {
   }
 
   // Show the selected item
-  void _showSelectedItem() {
-    if (selectedIndex != -1) {
-      final selectedItem = items[selectedIndex];
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Selected: $selectedItem')),
-      );
-    }
-  }
+  // void _showSelectedItem() {
+  //   if (selectedIndex != -1) {
+  //     final selectedItem = items[selectedIndex];
+  //     ScaffoldMessenger.of(context).showSnackBar(
+  //       SnackBar(content: Text('Selected: $selectedItem')),
+  //     );
+  //   }
+  // }
 }
